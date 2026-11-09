@@ -11,24 +11,36 @@
     
     <div class="relative mx-auto [image-rendering:pixelated] bg-[url('pixil-frame-0.png')] bg-contain bg-no-repeat bg-center shrink-0" style="width: 350px; height: 400px; min-width: 350px; min-height: 400px;">
     
-    <!-- Внутреннее рабочее окно -->
-        <div class="absolute flex flex-col items-center justify-between text-center overflow-y-auto" style="top: 45px; left: 35px; width: 280px; height: 310px;">
-            <div class="w-20 h-20 mx-auto mb-4 rounded-3xl overflow-hidden shadow-md shadow-purple-200/60 border-2 border-purple-300 bg-pink-100 flex items-center justify-center relative">
-            <!-- Сюда подставится фото из Telegram -->
-            <img id="user-avatar" src="" alt="Аватар" class="w-full h-full object-cover hidden">
-            <!-- Заглушка, если фото нет -->
-            <span id="avatar-fallback" class="text-3xl">Mew</span>
-            <h1 class="text-2xl font-black text-purple-500 tracking-wide mb-1">Привет, <span id="username">милашка</span>! ✨</h1>
-            <p class="text-slate-400 text-xs font-medium mb-6">El Tamagochi Hub успешно загружен</p>
-        
-            <!-- Карамельная кнопка -->
-            <button id="action-btn" class="w-full bg-gradient-to-r from-purple-400 to-rose-400 hover:from-purple-500 hover:to-rose-500 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-purple-400/40 active:scale-95 transition-all duration-150 border-b-4 border-rose-500/60 active:border-b-0 active:translate-y-1">
-                Нажми меня!
-            </button>
-            <a href="https://t.me/antired_angry_bot?startgroup=true" target="_blank" class="btn">
-                Добавить бота в группу
-            </a>
+        <!-- Внутреннее рабочее окно -->
+        <div class="absolute flex flex-col items-center justify-between text-center overflow-y-auto p-2" style="top: 45px; left: 35px; width: 280px; height: 310px;">
+            
+            <!-- Верхняя часть: аватар, имя и статус -->
+            <div class="w-full flex flex-col items-center">
+                <!-- Аватарка -->
+                <div class="w-14 h-14 mx-auto mb-2 rounded-2xl overflow-hidden shadow-sm border-2 border-purple-300 bg-pink-100 flex items-center justify-center relative shrink-0">
+                    <img id="user-avatar" src="" alt="Аватар" class="w-full h-full object-cover hidden">
+                    <span id="avatar-fallback" class="text-xl">🐱</span>
+                </div>
+
+                <!-- Тексты -->
+                <h1 class="text-base font-black text-purple-600 tracking-wide mb-1">Привет, <span id="username">милашка</span>! ✨</h1>
+                <p class="text-slate-400 text-[11px] font-medium">El Tamagochi Hub успешно загружен</p>
             </div>
+
+            <!-- Нижняя часть: кнопки управления, чтобы идеально влезли по высоте -->
+            <div class="w-full flex flex-col gap-2 mt-2">
+                <!-- Карамельная кнопка -->
+                <button id="action-btn" class="w-full bg-gradient-to-r from-purple-400 to-rose-400 hover:from-purple-500 hover:to-rose-500 text-white font-bold py-2.5 px-4 rounded-xl shadow-md shadow-purple-400/40 active:scale-95 transition-all duration-150 border-b-2 border-rose-500/60 active:border-b-0 active:translate-y-0.5 text-xs">
+                    Нажми меня!
+                </button>
+                
+                <!-- Кнопка добавления бота -->
+                <a href="https://t.me/antired_angry_bot?startgroup=true" target="_blank" 
+                   class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-2.5 px-4 rounded-xl shadow-md shadow-amber-400/40 active:scale-95 transition-all duration-150 border-b-2 border-amber-600/60 active:border-b-0 active:translate-y-0.5 text-xs text-center block">
+                    Добавить бота в группу
+                </a>
+            </div>
+
         </div>
     </div>
 </body>
