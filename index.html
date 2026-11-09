@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Tamagotchi</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-pink-100 via-yellow-50 to-amber-100 min-h-screen text-slate-700 p-4 flex items-center justify-center font-sans">
+    
+    <!-- Игрушечная карточка -->
+    <div class="w-full max-w-sm bg-white/90 backdrop-blur-md rounded-[32px] border-4 border-pink-200/80 shadow-xl shadow-pink-200/50 p-6 text-center">
+
+        <!-- Аватарка пользователя -->
+        <div class="w-20 h-20 mx-auto mb-4 rounded-3xl overflow-hidden shadow-md shadow-pink-200/60 border-2 border-pink-300 bg-pink-100 flex items-center justify-center relative">
+            <!-- Сюда подставится фото из Telegram -->
+            <img id="user-avatar" src="" alt="Аватар" class="w-full h-full object-cover hidden">
+            <!-- Заглушка, если фото нет -->
+            <span id="avatar-fallback" class="text-3xl">🧸</span>
+        </div>
+
+        <h1 class="text-2xl font-black text-pink-500 tracking-wide mb-1">Привет, <span id="username">милашка</span>! ✨</h1>
+        <p class="text-slate-400 text-xs font-medium mb-6">El Tamagochi Hub успешно загружен</p>
+        
+        <!-- Карамельная кнопка -->
+        <button id="action-btn" class="w-full bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg shadow-pink-400/40 active:scale-95 transition-all duration-150 border-b-4 border-rose-500/60 active:border-b-0 active:translate-y-1">
+            Нажми меня!
+        </button>
+</html>
